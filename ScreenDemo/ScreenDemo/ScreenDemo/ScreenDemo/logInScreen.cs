@@ -26,6 +26,7 @@ namespace ScreenDemo
         private void regButton_Click(object sender, EventArgs e)
         {
             new regScreen().Show();
+            this.Hide();
 
         }
 

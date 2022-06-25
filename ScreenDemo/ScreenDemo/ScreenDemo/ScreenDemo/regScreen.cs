@@ -20,6 +20,7 @@ namespace ScreenDemo
         private void regButton_Click(object sender, EventArgs e)
         {
             new logInScreen().Show();
+            this.Hide();
         }
 
         private void exitButton_Click(object sender, EventArgs e)
