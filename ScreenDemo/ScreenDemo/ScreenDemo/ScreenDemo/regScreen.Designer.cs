@@ -47,6 +47,7 @@
             this.regButton.TabIndex = 17;
             this.regButton.Text = "Register";
             this.regButton.UseVisualStyleBackColor = true;
+            this.regButton.Click += new System.EventHandler(this.regButton_Click);
             // 
             // exitButton
             // 
@@ -57,6 +58,7 @@
             this.exitButton.TabIndex = 16;
             this.exitButton.Text = "Exit";
             this.exitButton.UseVisualStyleBackColor = true;
+            this.exitButton.Click += new System.EventHandler(this.exitButton_Click);
             // 
             // reg_passLabel
             // 

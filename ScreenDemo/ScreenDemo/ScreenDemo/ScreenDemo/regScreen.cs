@@ -16,5 +16,15 @@ namespace ScreenDemo
         {
             InitializeComponent();
         }
+
+        private void regButton_Click(object sender, EventArgs e)
+        {
+            new logInScreen().Show();
+        }
+
+        private void exitButton_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
