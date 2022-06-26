@@ -62,6 +62,7 @@
             this.keepLoginChkBox.TabIndex = 1;
             this.keepLoginChkBox.Text = "Remember me";
             this.keepLoginChkBox.UseVisualStyleBackColor = false;
+            this.keepLoginChkBox.CheckedChanged += new System.EventHandler(this.keepLoginChkBox_CheckedChanged);
             // 
             // signinLabel
             // 

@@ -34,5 +34,14 @@ namespace ScreenDemo
         {
             this.Close();
         }
+
+        private void keepLoginChkBox_CheckedChanged(object sender, EventArgs e)
+        {
+            
+            if (keepLoginChkBox.Checked)
+            {
+                
+            }
+        }
     }
 }
