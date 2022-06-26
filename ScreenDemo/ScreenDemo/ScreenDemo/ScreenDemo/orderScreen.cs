@@ -37,7 +37,11 @@ namespace ScreenDemo
 
             if (coffee_HotRadButton.Checked)
             {
-                MessageBox.Show("Hot coffe selected");
+                MessageBox.Show("Hot Tea selected");
+            }
+            else
+            {
+                MessageBox.Show("Cold Tea selected");
             }
         }
 
