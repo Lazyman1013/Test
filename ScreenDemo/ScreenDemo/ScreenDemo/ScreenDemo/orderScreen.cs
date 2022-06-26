@@ -20,11 +20,25 @@ namespace ScreenDemo
         private void pictureBox2_Click(object sender, EventArgs e)
         {
             MessageBox.Show("You have selected Coffee");
+
+            if (coffee_HotRadButton.Checked)
+            {
+                MessageBox.Show("Hot coffee selected");
+            }
+            else
+            {
+                MessageBox.Show("Cold coffee selected");
+            }
         }
 
         private void pictureBox3_Click(object sender, EventArgs e)
         {
             MessageBox.Show("You have selected Tea");
+
+            if (coffee_HotRadButton.Checked)
+            {
+                MessageBox.Show("Hot coffe selected");
+            }
         }
 
         private void button3_Click(object sender, EventArgs e)
