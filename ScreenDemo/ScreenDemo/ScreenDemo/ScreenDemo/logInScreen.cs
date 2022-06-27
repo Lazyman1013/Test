@@ -20,6 +20,10 @@ namespace ScreenDemo
         private void loginButton_Click(object sender, EventArgs e)
         {
             new orderScreen().Show();
+            if (userTxtBox.Text == "") {
+            
+            
+            }
             this.Hide();
         }
 
