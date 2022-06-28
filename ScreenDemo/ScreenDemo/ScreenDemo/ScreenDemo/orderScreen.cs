@@ -47,7 +47,18 @@ namespace ScreenDemo
 
         private void button3_Click(object sender, EventArgs e)
         {
-            this.Close();
+            var result = MessageBox.Show("Are you sure you want to exit?",
+                "Exit", MessageBoxButtons.YesNo);
+            if (result == DialogResult.Yes)
+            {
+                this.Close();
+
+            }
+            else if (result == DialogResult.No)
+            {
+                new orderScreen().Show();
+                this.Hide();
+            }
         }
     }
 }

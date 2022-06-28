@@ -19,8 +19,25 @@ namespace ScreenDemo
 
         private void loginButton_Click(object sender, EventArgs e)
         {
-            new orderScreen().Show();
-            this.Hide();
+            
+            if (userTxtBox.Text == "" | passTxtBox.Text == "")
+            {
+                if (userTxtBox.Text == "")
+                {
+                    MessageBox.Show("Fill the Username or Wrong Username");
+                }
+                if (passTxtBox.Text == "")
+                {
+                    MessageBox.Show("Fill the Password or Wrong Password");
+                }
+            }
+            else
+            {
+                MessageBox.Show("LogIn Succesfully");
+                MessageBox.Show("Enjoy our Product!");
+                new orderScreen().Show();
+                this.Hide();
+            }
         }
 
         private void regButton_Click(object sender, EventArgs e)
@@ -32,8 +49,19 @@ namespace ScreenDemo
 
         private void exitButton_Click(object sender, EventArgs e)
         {
-            this.Close();
-        }
+            var result = MessageBox.Show("Are you sure you want to exit?",
+                 "Exit", MessageBoxButtons.YesNo);
+            if (result == DialogResult.Yes)
+            {
+                this.Close();
+            }
+            else if (result == DialogResult.No)
+            {
+                new logInScreen().Show();
+                this.Hide();
+            }
+        
+    }
 
         private void keepLoginChkBox_CheckedChanged(object sender, EventArgs e)
         {

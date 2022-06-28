@@ -19,13 +19,39 @@ namespace ScreenDemo
 
         private void regButton_Click(object sender, EventArgs e)
         {
-            new logInScreen().Show();
-            this.Hide();
+            if (reg_userTxtBox.Text == "" | reg_passTxtBox.Text == "")
+            {
+                if (reg_userTxtBox.Text == "")
+                {
+                    MessageBox.Show("Fill the Username");
+                }
+                if (reg_passTxtBox.Text == "")
+                {
+                    MessageBox.Show("Fill the Password");
+                }
+            }
+        
+            else 
+                {
+                MessageBox.Show("You are now Registered");
+                new logInScreen().Show();
+                    this.Hide();  
+            }
         }
 
         private void exitButton_Click(object sender, EventArgs e)
         {
-            this.Close();
+            var result = MessageBox.Show("Are you sure you want to exit?",
+                  "Exit", MessageBoxButtons.YesNo);
+            if (result == DialogResult.Yes)
+            {
+                this.Close();
+            }
+            else if (result == DialogResult.No)
+            {
+                new regScreen().Show();
+                this.Hide();
+            }
         }
     }
 }
