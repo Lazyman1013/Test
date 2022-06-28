@@ -19,12 +19,25 @@ namespace ScreenDemo
 
         private void loginButton_Click(object sender, EventArgs e)
         {
-            new orderScreen().Show();
-            if (userTxtBox.Text == "") {
             
-            
+            if (userTxtBox.Text == "" | passTxtBox.Text == "")
+            {
+                if (userTxtBox.Text == "")
+                {
+                    MessageBox.Show("Fill the Username or Wrong Username");
+                }
+                if (passTxtBox.Text == "")
+                {
+                    MessageBox.Show("Fill the Password or Wrong Password");
+                }
             }
-            this.Hide();
+            else
+            {
+                MessageBox.Show("LogIn Succesfully");
+                MessageBox.Show("Enjoy our Product!");
+                new orderScreen().Show();
+                this.Hide();
+            }
         }
 
         private void regButton_Click(object sender, EventArgs e)
