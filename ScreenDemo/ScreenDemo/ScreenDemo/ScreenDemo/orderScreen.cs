@@ -48,6 +48,7 @@ namespace ScreenDemo
             if (result == DialogResult.Yes)
             {
                 this.Close();
+
             }
             else if (result == DialogResult.No)
             {
