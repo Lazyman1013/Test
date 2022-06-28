@@ -49,8 +49,19 @@ namespace ScreenDemo
 
         private void exitButton_Click(object sender, EventArgs e)
         {
-            this.Close();
-        }
+            var result = MessageBox.Show("Are you sure you want to exit?",
+                 "Exit", MessageBoxButtons.YesNo);
+            if (result == DialogResult.Yes)
+            {
+                this.Close();
+            }
+            else if (result == DialogResult.No)
+            {
+                new logInScreen().Show();
+                this.Hide();
+            }
+        
+    }
 
         private void keepLoginChkBox_CheckedChanged(object sender, EventArgs e)
         {
